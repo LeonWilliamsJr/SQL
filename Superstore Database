@@ -31,9 +31,8 @@ VALUES
 #For this project, I used SQL to query the Superstore database to get information about items sold at the store and their prices. 
 
 #Use a SELECT statement to order the items by price.
-SELECT*
+SELECT item_name, price
 FROM superstore
-WHERE price > 0
 ORDER BY price DESC;
 
 #Show a statistic about the item prices.
