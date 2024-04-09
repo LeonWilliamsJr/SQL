@@ -1,3 +1,5 @@
+#This analysis utilized the following Fortune 500 dataset:
+
 CREATE TABLE fortune_companies (
     company_id INTEGER PRIMARY KEY,
     company_name TEXT,
@@ -58,7 +60,7 @@ VALUES
 
 #Analysis
 
-#Designate all companies' work life balance as "good", "average" or "bad" based on the number of paid time off days.
+#Designate each company's work life balance as "good", "average" or "bad" based on the number of paid time off days.
 SELECT company_name, 
 CASE 
   WHEN paid_time_off_days<=15 THEN 'bad'
