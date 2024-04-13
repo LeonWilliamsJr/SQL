@@ -1,6 +1,5 @@
 #This project utilizes the following Pharmacy Company data:
 
--- Create the 'prescriptions' table
 CREATE TABLE prescriptions (
     person_ID INTEGER,
     geo TEXT,
@@ -9,14 +8,12 @@ CREATE TABLE prescriptions (
     active TEXT
 );
 
--- Create the 'medication' table
 CREATE TABLE medication (
     person_ID INTEGER,
     medication_name TEXT,
     prescription_id INTEGER
 );
 
--- Insert data into the 'prescriptions' table
 INSERT INTO prescriptions (person_ID, geo, doctor_name, date_filled, active)
 VALUES
     (1, '90210', 'Dr. Smith', '2024-01-10', 'Y'),
@@ -45,7 +42,6 @@ VALUES
     (24, '60601', 'Dr. Patel', '2024-01-24', 'Y'),
     (25, '75201', 'Dr. Garcia', '2023-05-04', 'Y');
 
--- Insert data into the 'medication' table
 INSERT INTO medication (person_ID, medication_name, prescription_id)
 VALUES
     (1, 'Teamocil', 12345678),
