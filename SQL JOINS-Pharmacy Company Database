@@ -72,14 +72,14 @@ VALUES
 
 #For this project, I used the SQL INNER JOIN function to query data from the prescriptions and medication tables. 
 
-#Which medications has Dr. Garcia prescribed? 
+#1. Which medications has Dr. Garcia prescribed? 
 SELECT DISTINCT scripts.doctor_name, meds.medication_name
 FROM prescriptions AS scripts
 INNER JOIN medication AS meds
   ON scripts.person_id=meds.person_id
     WHERE scripts.doctor_name = 'Dr. Garcia';
 
-#Zonkify is no longer on the market. When were all the Zonkify prescriptions last filled? 
+#2. Zonkify is no longer on the market. When were all the Zonkify prescriptions last filled? 
 SELECT meds.medication_name, scripts.date_filled
 FROM medication AS meds
 INNER JOIN prescriptions AS scripts
